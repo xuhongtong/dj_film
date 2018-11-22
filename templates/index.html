@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+<title>{% block title %}主页{% endblock %}</title>
+{% block content %}
+    <div class="middle clear">
+    <div class="middle_left ">
+        <span>最新电影推荐</span>
+    </div>
+    <div class="middle_right">
+        <a href="#"><span>更多</span></a>
+        <a href="#"><span>最新电影排行榜</span></a>
+    </div>
+</div>
+    <div class="movie_list" >
+    {% for film in films %}
+            <ul class="movie">
+                <li><a href="http://127.0.0.1/film.id"><img src="/{{ film.image }}"></a></li>
+                <li>{{ film.name }}</li>
+                <li>{{ film.type_name }}-{{ film.on_decade  }}</li>
+            </ul>
+    {% endfor %}
+    </div>
+    <div class="right">
+            {% for f in fi %}
+            <table  class="movie_top">
+            <tr >
+                <td class="top1">{{ f.name }}</td>
+                <td class="top2">{{ f.update_time|slice:'5:11'}}</td>
+            </tr>
+        </table>
+    {% endfor %}
+    </div>
+{% endblock %}

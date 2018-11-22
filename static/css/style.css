@@ -1,0 +1,105 @@
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration:none;
+            color:gainsboro;
+        }
+
+        .clear {
+        zoom: 1;
+        }
+
+        .clear:after {
+            clear: both;
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+
+        .head{
+            background: #343a40;
+            height: 40px;
+        }
+        .head>a>span{
+            margin:7px;
+            display: inline-block;
+            color: gainsboro;
+        }
+
+
+         .middle{
+            margin-left: 100px;
+            width: 80%;
+            margin-top:30px;
+            background: #343a40;
+            height: 30px;
+        }
+        .middle_left>span,.middle_right>a>span{
+            margin-top:4px;
+            display: inline-block;
+            color: gainsboro;
+        }
+        .middle_right>a>span{
+            margin-top:4px;
+            display: inline-block;
+            color: gainsboro;
+            margin-left: 40px;
+        }
+
+        .middle_left{
+            float:left;
+        }
+        .middle_right{
+            float: right;
+        }
+
+        .movie_list{
+            margin-left: 95px;
+            width: 60%;
+        }
+        .movie{
+            margin-left: -35px;
+            float: left;
+        }
+
+        .movie>li>a>img{
+            width:120px;
+            height: 150px;
+        }
+        .movie>li{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 120px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+
+        .right{
+            margin-top:30px;
+            float: left;
+            margin-left: -35px;
+        }
+        .movie_list{
+            float: left;
+        }
+
+        .top1{
+            font-size: 14px;
+            text-align: left;
+            width: 150px;
+        }
+
+        .top2{
+            font-size: 14px;
+            text-align: right;
+            width: 150px;
+        }
