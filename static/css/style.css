@@ -23,6 +23,10 @@
             visibility: hidden;
         }
 
+        .content1{
+            float: left;
+        }
+
         .head{
             background: #343a40;
             height: 40px;
@@ -90,16 +94,61 @@
         }
         .movie_list{
             float: left;
+
         }
 
         .top1{
-            font-size: 14px;
+            font-size: 12px;
             text-align: left;
-            width: 150px;
+            width: 250px;
+            height: 20px;
         }
 
         .top2{
-            font-size: 14px;
+            font-size: 12px;
             text-align: right;
-            width: 150px;
+            width: 50px;
         }
+
+
+        /*详情页*/
+        .detail_title{
+            margin-top: 20px;
+            background: gainsboro;
+            height: 40px;
+        }
+
+        .detail_title>span{
+            margin:7px;
+            display: inline-block;
+        }
+
+        .detail_img>img{
+            width:200px;
+            height: 300px;
+        }
+        .detail_img>div{
+            background:black;
+            width: 200px;
+            height: 40px;
+            color: white;
+            text-align: center;
+        }
+        .detail_img{
+            float: left;
+            margin: 10px;
+            width: 30px;
+        }
+        .detail_right{
+            float: right;
+
+            width: 83%;
+        }
+        .detail_right>li>span{
+            color: blue;
+        }
+        .detail_right>li{
+            margin-top: 10px;
+        }
+
+

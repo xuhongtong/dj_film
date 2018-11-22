@@ -1,5 +1,29 @@
 {% extends 'base/base.html' %}
 <title>{% block title %}详情页{% endblock %}</title>
 {% block content %}
+    <div class="detail clear"></div>
+<div class="detail_title">
+    <span>当前位置：</span>
+    <span>首页 >></span>
+    <span>电影 >></span>
+    <span>剧情片 >></span>
+    <span>犯罪片 >></span>
+    <span>{{ films.name }}</span>
+</div>
+    <div class="detail">
+        <div class="detail_img" >
+    <img src="/{{ films.image }}" alt="">
+    <div>立即播放</div>
+    </div>
+        <ul class="detail_right">
+        <li><span>上映年代：</span>{{ films.name }} &nbsp;<span>状态：</span>{{ films.status }}</li>
+        <li><span>类型：</span>{{ films.type_name }}</li>
+        <li><span>主演：</span>{{ films.actor }}</li>
+        <li><span>更新日期：</span>{{ films.update_time }}</li>
+        <li><span>剧情：</span>{{ films.plot }}</li>
+        <li><span>影片评价：</span>{{ films.evaluation }}</li>
+    </ul>
+    </div>
+
 
 {% endblock %}

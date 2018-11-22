@@ -1,6 +1,8 @@
 {% extends 'base/base.html' %}
 <title>{% block title %}主页{% endblock %}</title>
 {% block content %}
+<div class="content_mid clear">
+    <div class="content1">
     <div class="middle clear">
     <div class="middle_left ">
         <span>最新电影推荐</span>
@@ -11,22 +13,85 @@
     </div>
 </div>
     <div class="movie_list" >
-    {% for film in films %}
+    {% for film_movie1 in film_movies1 %}
             <ul class="movie">
-                <li><a href="http://127.0.0.1/film.id"><img src="/{{ film.image }}"></a></li>
-                <li>{{ film.name }}</li>
-                <li>{{ film.type_name }}-{{ film.on_decade  }}</li>
+                <li><a href="http://127.0.0.1:8000/detail/{{ film_movie1.id }}"><img src="/{{ film_movie1.image }}"></a></li>
+                <li>{{ film_movie1.name }}</li>
+                <li>{{ film_movie1.type_name }}-{{ film_movie1.on_decade  }}</li>
             </ul>
     {% endfor %}
     </div>
     <div class="right">
-            {% for f in fi %}
+            {% for film_movie2 in film_movies2 %}
             <table  class="movie_top">
             <tr >
-                <td class="top1">{{ f.name }}</td>
-                <td class="top2">{{ f.update_time|slice:'5:11'}}</td>
+                <td class="top1">{{ film_movie2.name }}</td>
+                <td class="top2">{{ film_movie2.update_time|slice:'5:11'}}</td>
             </tr>
         </table>
     {% endfor %}
     </div>
+</div>
+    <div class="content1">
+    <div class="middle clear">
+    <div class="middle_left ">
+        <span>最新电视剧推荐</span>
+    </div>
+    <div class="middle_right">
+        <a href="#"><span>更多</span></a>
+        <a href="#"><span>最新电视剧排行榜</span></a>
+    </div>
+</div>
+    <div class="movie_list" >
+    {% for film_teleplay1 in film_teleplays1 %}
+            <ul class="movie">
+                <li><a href="http://127.0.0.1:8000/detail/{{ film_teleplay1.id }}"><img src="/{{ film_teleplay1.image }}"></a></li>
+                <li>{{ film_teleplay1.name }}</li>
+                <li>{{ film_teleplay1.type_name }}-{{ film_teleplay1.on_decade  }}</li>
+            </ul>
+    {% endfor %}
+    </div>
+    <div class="right">
+            {% for film_teleplay2 in film_teleplays2 %}
+            <table  class="movie_top">
+            <tr >
+                <td class="top1">{{ film_teleplay2.name }}</td>
+                <td class="top2">{{ film_teleplay2.update_time|slice:'5:11'}}</td>
+            </tr>
+        </table>
+    {% endfor %}
+    </div>
+</div>
+    <div class="content1">
+    <div class="middle clear">
+    <div class="middle_left ">
+        <span>最新电视剧推荐</span>
+    </div>
+    <div class="middle_right">
+        <a href="#"><span>更多</span></a>
+        <a href="#"><span>最新电视剧排行榜</span></a>
+    </div>
+</div>
+    <div class="movie_list" >
+    {% for film_animation1 in film_animations1 %}
+            <ul class="movie">
+                <li><a href="http://127.0.0.1:8000/detail/{{ film_animation1.id }}"><img src="/{{ film_animation1.image }}"></a></li>
+                <li>{{ film_animation1.name }}</li>
+                <li>{{ film_animation1.type_name }}-{{ film_animation1.on_decade  }}</li>
+            </ul>
+    {% endfor %}
+    </div>
+    <div class="right">
+            {% for film_animation2 in film_animations2 %}
+            <table  class="movie_top">
+            <tr >
+                <td class="top1">{{ film_animation2.name }}</td>
+                <td class="top2">{{ film_animation2.update_time|slice:'5:11'}}</td>
+            </tr>
+        </table>
+    {% endfor %}
+    </div>
+</div>
+
+</div>
 {% endblock %}
