@@ -111,6 +111,5 @@ apps/__pycache__/
 apps/movies/__pycache__/
 apps/movies/migrations/__pycache__/
 film/__pycache__/
-manage.py
 static/js/
 static/upload/filmPic/readme.txt
